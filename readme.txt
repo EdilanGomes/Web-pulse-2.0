@@ -1,13 +1,23 @@
 
+Tecnologias usadas:
+
+HTML5
+CSS3
+BOOTSTRAP
+JAVASCRIPT
+
+lINK DE ACESSO:  --> https://edilangomes.github.io/Web-pulse-2.0/
+
+
+
+
+
+
+
 
 CREDITOS & REFERENCIAS
 
 https://getbootstrap.com/
-
-Stock Photos
-https://unsplash.com/
-https://www.freepik.com/
-https://www.pexels.com/
 
 Fonts
 Google fonts
@@ -20,5 +30,4 @@ JQuery Plugins
 Swiper Slider - https://swiperjs.com/
 AOS - https://michalsnik.github.io/aos/
 
-Thanks for downloading from TemplatesJungle.com !
 
