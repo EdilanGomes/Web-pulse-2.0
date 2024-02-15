@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Web Pulse - Criação de Sites</title>
+
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+  <!-- Link Bootstrap's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts ================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- script ================================================== -->
+  <script src="js/modernizr.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
+
+  <!-- nav bar start  -->
+  <header id="nav" class="site-header position-fixed text-white bg-dark">
+    <nav id="navbar-example2" class="navbar navbar-expand-lg py-2">
+
+      <div class="container ">
+
+
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation"><ion-icon
+            name="menu-outline" style="font-size: 30px;"></ion-icon></button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav align-items-center justify-content-end align-items-center flex-grow-1 ">
+              <li class="nav-item">
+                <a class="nav-link active me-md-4" href="#billboard">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="#residence">Modelos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="#about-us">Por que ter um site?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="#help">Equipe</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link me-md-4 text-center dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false">Contato</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a href="https://www.instagram.com/webpulse_/" class="dropdown-item">Instagram <span class="badge bg-secondary">@</span></a>
+                  </li>
+                  <li><a href="https://wa.me/qr/V5TOOHTEGYCED1" class="dropdown-item">Whatsapp <span class="badge bg-secondary">Nº</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+              </li>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing mt-4">
+                        <nav>
+                          <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+                            <button class="btn btn-outline-primary text-uppercase me-3 active" id="nav-sign-in-tab"
+                              data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab"
+                              aria-controls="nav-sign-in" aria-selected="true">Log In</button>
+                            <button class="btn btn-outline-primary text-uppercase" id="nav-register-tab"
+                              data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab"
+                              aria-controls="nav-register" aria-selected="false">Sign Up</button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab">
+                            <form id="form1" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail1"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email</label>
+                                <input type="text" id="exampleInputEmail1" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword1"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Senha</label>
+                                <input type="password" id="inputPassword1" placeholder="Senha"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                                <div id="passwordHelpBlock" class="form-text text-center">
+                                  <a href="#" class=" password">Esqueceu a senha ?</a>
+                                </div>
+
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">Guardar Login</span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Log
+                                  In</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade" id="nav-register" role="tabpanel"
+                            aria-labelledby="nav-register-tab">
+                            <form id="form2" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail2"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email</label>
+                                <input type="text" id="exampleInputEmail2" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword2"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Senha</label>
+                                <input type="password" id="inputPassword2" placeholder="senha"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">I agree to the <a href="#"
+                                    class="text-black password border-bottom">Privacy Policy</a>
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Cadastrar</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <li class="nav-item">
+                <a class="btn-medium btn btn-primary" href="#" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2">Cadastrar</a>
+              </li>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing mt-4">
+                        <nav>
+                          <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab2" role="tablist">
+                            <button class="btn btn-outline-primary text-uppercase me-4 " id="nav-sign-in-tab2"
+                              data-bs-toggle="tab" data-bs-target="#nav-sign-in2" type="button" role="tab"
+                              aria-controls="nav-sign-in2" aria-selected="false">Entrar</button>
+                            <button class="btn btn-outline-primary text-uppercase active" id="nav-register-tab2"
+                              data-bs-toggle="tab" data-bs-target="#nav-register2" type="button" role="tab"
+                              aria-controls="nav-register2" aria-selected="true">Cadastrar</button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div class="tab-pane fade " id="nav-sign-in2" role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2">
+                            <form id="form3" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email</label>
+                                <input type="text" id="exampleInputEmail3" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword3"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Senha</label>
+                                <input type="password" id="inputPassword3" placeholder="Senha"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                                <div id="passwordHelpBlock2" class="form-text text-center">
+                                  <a href="#" class=" password">Esqueceu a Senha?</a>
+                                </div>
+
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">Lembrar</span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Entrar</button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="tab-pane fade active show" id="nav-register2" role="tabpanel"
+                            aria-labelledby="nav-register-tab2">
+                            <form id="form4" class="form-group flex-wrap p-3 ">
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black">Email</label>
+                                <input type="text" id="exampleInputEmail4" name="email" placeholder="Email"
+                                  class="form-control ps-3">
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label for="inputPassword4"
+                                  class="form-label  fs-6 text-uppercase fw-bold text-black">Senha</label>
+                                <input type="password" id="inputPassword4" placeholder="Senha"
+                                  class="form-control ps-3" aria-describedby="passwordHelpBlock">
+                              </div>
+                              <label class="py-3">
+                                <input type="checkbox" required="" class="d-inline">
+                                <span class="label-body text-black">Quero me cadastrar na <a href="#"
+                                    class="text-black password border-bottom">WEB PULSE</a>
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Cadastrar</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+
+          </div>
+        </div>
+
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- billboard start  -->
+  <section id="billboard">
+    <div class="container ">
+      <div class="row flex-lg-row-reverse align-items-center ">
+
+        <div class="col-lg-6">
+          <img src="img/LOGO.png" class="d-block mx-lg-auto img-fluid mt-5">
+        </div>
+
+        <div class="col-lg-6">
+          <h1 class=" text-capitalize  lh-1 my-3">Seja Bem vindo(a) a
+            Web Pulse!</h1>
+          <p class="lead">Web Pulse: Especialistas em criação de sites estáticos para uma presença online impactante e duradoura.</p>
+          <nav class="navbar navbar-expand-lg billboard-nav">
+
+
+
+
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residence start  -->
+  <section id="residence">
+    <div class="container  my-5 py-5">
+      <h2 class="text-capitalize m-0 py-lg-5">Modelos De Sites Destaques</h2>
+
+      <div class="swiper-button-next residence-swiper-next  residence-arrow"></div>
+      <div class="swiper-button-prev residence-swiper-prev residence-arrow"></div>
+
+      <div class="swiper residence-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/html-portfolio-template/"><img src="img/portio-html-template-768x576.jpg" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4 text-center">Modelo Portio Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/apsho-html-template/"><img src="img/App-landing-page.png" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4 text-center">Modelo Apsho Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/food-groceries-template/"><img src="img/modelo-galeria.png" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4">Modelo Galeria Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/architect-portfolio-template/"><img src="img/modelo-moderno.jpg" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4 text-center">Modelo Moderno Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/nordic-store/"><img src="img/ecommerce.jpg" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4 text-center">Modelo E-commerce Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/psd-freebies/silon/"><img src="img/loja.png" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4 text-center">Modelo E-commerce VIP</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <a href="https://freebiesbug.com/code-stuff/woo-landing-page-html-template/"><img src="img/modelo1.jpg" class="card-img-top" alt="image"></a>
+              <div class="card-body p-0">
+                <a href="property-single.html">
+                  <h5 class="card-title pt-4">Modelo Default Profissional</h5>
+                </a>
+                <p class="card-text text-center">Modelo Disponível</p>
+                <h3 class="text-center">R$299,90</h3>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+      <div class="residence-btn">
+        <a href="https://www.instagram.com/webpulse_/?next=%2F" class="btn btn-primary btn-lg my-5">Veja no Instagram</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--About us start  -->
+  <section id="about-us">
+    <div class="container">
+      <div class="row py-lg-5">
+
+        <h2 class="text-capitalize text-center m-0 py-lg-5">Porque ter um site Profissional?</h2>
+
+        <div class="text-center col-lg-4">
+          <img src="images/search.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140" loading="lazy">
+          <h4 class="fw-normal mt-5 ">Visibilidade Online</h4>
+          <p>Um site permite que sua empresa seja encontrada por clientes em potencial 24 horas por dia, 7 dias por semana, ampliando sua visibilidade além das fronteiras físicas.</p>
+        </div>
+
+        <div class="text-center col-lg-4">
+          <img src="images/search.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140" loading="lazy">
+          <h4 class="fw-normal mt-5">Acesso Global</h4>
+          <p>Com um site, sua empresa pode alcançar clientes em qualquer lugar do mundo, expandindo seu mercado além da localidade física.</p>
+        </div>
+
+        <div class="text-center col-lg-4">
+          <img src="images/search.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140" loading="lazy">
+          <h4 class="fw-normal mt-5 ">Credibilidade</h4>
+          <p>Ter um site profissional transmite credibilidade aos clientes em potencial, mostrando que sua empresa está estabelecida e séria em seu setor. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial start  -->
+  <section id="testimonial">
+    <div class="container my-5">
+
+
+
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img src="images/quote.png" class="rounded mx-auto d-inline" alt="...">
+                <p class="testimonial-p mt-4">Nós da Web Pulse acreditamos firmemente na responsabilidade e confiabilidade em cada projeto que assumimos. Cada site que criamos é cuidadosamente desenvolvido para atender às necessidades e expectativas únicas de nossos clientes.</p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Criação de Site</p>
+                    <p class="">WEB PULSE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img src="images/quote.png" class="rounded mx-auto d-inline" alt="...">
+                <p class="testimonial-p mt-4">Nosso compromisso com a excelência e a integridade é evidente em cada detalhe, desde o design até a implementação, garantindo que entreguemos soluções sólidas e confiáveis.</p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Criação de Site</p>
+                    <p class="">WEB PULSE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img src="images/quote.png" class="rounded mx-auto d-inline" alt="...">
+                <p class="testimonial-p mt-4">Com uma abordagem centrada no cliente, trabalhamos de perto com você para entender suas metas e objetivos, assegurando que cada aspecto de seu site seja projetado para alcançar resultados tangíveis.</p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Criação de Site</p>
+                    <p class="">WEB PULSE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <div class=" testimonial-swiper-button col-md-3 position-absolute">
+          <div class="swiper-button-prev testimonial-arrow"></div>
+          <div class="arrow-divider"> | </div>
+          <div class="swiper-button-next testimonial-arrow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Help start  -->
+  <section id="help" class="py-5"
+    style="background: linear-gradient(270deg, #1A242F 0.01%, rgba(26, 36, 47, 0.00) 100%);">
+    <div class="container-lg my-5">
+
+      <div class="row d-flex justify-content-between align-items-center">
+
+        <div class="col-md-6">
+          <div class="image-holder d-flex justify-content-center align-items-center">
+            <img src="img/edilan.jpg" class="img-fluid img-thumbnail mr-2" alt="Bootstrap Themes" loading="lazy" style="max-width: 300px;">
+            <img src="img/tomas.jpg" class="img-fluid img-thumbnail ml-2" alt="Bootstrap Themes" loading="lazy" style="max-width: 300px;">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="text-content ps-md-5 mt-4 mt-md-0">
+            <h2 class="text-capitalize">Nossos Desenvolvedores</h2>
+            <p>Nossa equipe é composta por um grupo especializado de desenvolvedores front-end dedicados à criação de sites de alta qualidade. Priorizamos a excelência técnica e estética, garantindo que cada projeto seja executado com precisão e atenção aos detalhes.</p>
+            <a href="https://www.linkedin.com/in/edilan-batista-824b7b270/" class="btn btn-primary btn-lg">Edilan</a>
+            <a href="https://www.linkedin.com/in/tomaslmdev/" class="btn btn-primary btn-lg">Tomás</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lets start  -->
+  <section id="start">
+    <div class="container my-5 py-5">
+      <div class="row featurette py-lg-5 ">
+        <div class="col-md-5 order-md-1 d-flex">
+          <h1 class="text-capitalize  lh-1 mb-3">Suporte Pós-publicação!</h1>
+        </div>
+        <div class="col-md-7 order-md-2">
+          <div class="text-content ps-md-5 mt-4 mt-md-0">
+            <p class="py-lg-2">Sim, oferecemos suporte Pós-publicação para todos os nossos clientes. Se você tiver alguma dúvida ou precisar de assistência após o lançamento do seu site, nossa equipe estará disponível para ajudar e fornecer suporte contínuo.</p>
+            <a href="https://www.instagram.com/webpulse_/" class="btn btn-primary btn-lg px-4 me-md-2">Get
+              Nos mande Mensagem!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer start  -->
+  <section id="footer">
+    <div class="container footer-container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5  ">
+
+        <div class=" col-md-4">
+          <h3>Web Pulse</h3>
+          <p>Web Pulse: Especialistas em criação de sites estáticos para uma presença online impactante e duradoura.</p>
+        </div>
+
+        <div class="col-md-2 ">
+          <h5>Redes Sociais</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://www.instagram.com/webpulse_/" class="nav-link p-0 ">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 ">
+          <h5>Serviços</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Sites Profissionais</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Criação de Logos</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Tecnologias do Google</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 ">
+          <h5>Equipe</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/edilan-batista-824b7b270/" class="nav-link p-0 ">Edilan</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/tomaslmdev/" class="nav-link p-0 ">Tomás</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 ">
+          <h5>Ir ao topo do site</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Clique Aqui!</a></li>
+
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top"></footer>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 ">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>© Copyright Web Pulse. Todos os direitos reservados.</p>
+
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <p>Feito em parceria com: <a href="https://templatesjungle.com/" class="link-primary"
+              target="_blank">TemplatesJungle</a></p>
+
+        </div>
+
+      </footer>
+    </div>
+  </section>
+
+
+
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
